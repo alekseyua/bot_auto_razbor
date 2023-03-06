@@ -1,0 +1,150 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/fonts/index.scss';
+
+.input {
+  &[disabled] {
+    &::part(base) {
+      --gx-input-color-disabled: rgba(40, 37, 52, 0.5);
+      border-color: var(--gx-color-gray);
+      background-color: var(--gx-color-gray);
+      &:focus-within {
+        border-radius: 4px;
+        border-color: var(--gx-color-darkgray);
+      }
+    }
+  }
+  &::part(base) {
+    border-color: $dg;
+    border-width: 2px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    opacity: 1;
+    height: 44px;
+
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+  &::part(label) {
+    @extend %text-small;
+    display: block;
+    color: $p;
+    opacity: 0.75;
+  }
+  &::part(input) {
+    @extend %font;
+    font-size: 14px;
+    height: 40px;
+
+    &::placeholder {
+      color: $dg2;
+      opacity: 1;
+    }
+  }
+  &::part(suffix) {
+    --icon-width: 16px;
+    --icon-height: 16px;
+  }
+}
+
+
+.link {
+  position: absolute;
+  visibility: hidden;
+}
+
+.error {
+  &::part(base) {
+    border: 2px solid rgba(233, 60, 60, 0.75);
+    box-sizing: border-box;
+    border-radius: 6px;
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $pi;
+      box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.input {
+  &-mt_20 {
+    margin-bottom: 20px;
+  }
+}
+
+.counter {
+  &::part(input) {
+    margin: 0;
+    padding-left: 5px;
+    width: 65px;
+    text-align: center;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      margin: 0;
+    }
+  }
+  &::part(base) {
+    border: 1px solid #f3eff3;
+    box-sizing: border-box;
+    border-radius: 0px;
+
+    &:focus-within {
+      border-radius: 4px;
+      box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+.serche {
+  &::part(base) {
+    border-color: $dg;
+    border-width: 2px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    opacity: 1;
+    height: 44px;
+
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+  &::part(label) {
+    @extend %text-small;
+    display: block;
+    color: $p;
+    opacity: 0.75;
+  }
+  &::part(input) {
+    @extend %font;
+    font-size: 14px;
+    height: 40px;
+
+    &::placeholder {
+      color: $dg2;
+      opacity: 1;
+    }
+  }
+  &::part(suffix) {
+    --icon-width: 16px;
+    --icon-height: 16px;
+  }
+}
+
+.fade {
+  &-out {
+    transition: all 0.3s;
+    width: 0;
+    visibility: hidden;
+  }
+  &-in {
+    transition: all 0.3s;
+    width: 100%;
+    visibility: visible;
+  }
+}
+.high {
+  z-index: 101;
+}

@@ -1,0 +1,27 @@
+.raiting-star {
+
+    //.raiting-star__container{}
+    &__container {
+        max-width: 150px;
+        display: flex;
+        align-items: center;
+    }
+    //.raiting-star__star{}
+    &__star {
+        display: flex;
+        &:hover{
+            cursor: pointer;
+        }
+        &--active{
+            padding: 0;
+        }
+    }
+    //.raiting-star__label{}
+    &__label{
+        padding: 0;
+        display: ruby;
+        margin-left: 5px;
+        white-space: pre;
+    }
+
+}

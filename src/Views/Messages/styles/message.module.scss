@@ -1,0 +1,21 @@
+.message{
+    //.message__description{}
+    &__description{
+        // min-height: 43px;
+        margin: 0 15px 15px;
+        width: calc(100% - 30px);
+        padding: 15px;
+        position: relative;
+        z-index: 11;
+        background: rgba(255, 255, 255, 0.8);
+        // box-shadow: 0px 12px 24px 6px rgba(97, 97, 97, 0.08), 0px 24px 48px 6px rgba(97, 97, 97, 0.08);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        min-width: 300px;
+
+        &>div {
+            float: left;
+        }
+    }
+}

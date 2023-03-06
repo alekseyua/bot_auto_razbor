@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/fonts/index.scss';
+
+.input {
+  &::part(base) {
+    border-color: $dg;
+    border-width: 2px;
+    border-radius: 6px;
+    height: 56px;
+    box-sizing: border-box;
+
+    &:focus-within {
+      border-radius: 8px;
+      border-color: $dg2;
+    }
+  }
+
+  &::part(label) {
+    @extend %text-small;
+    display: block;
+    color: $p;
+    opacity: 0.75;
+  }
+
+  &::part(input) {
+    @extend %font;
+    font-size: 14px;
+    height: 54px;
+
+    &::placeholder {
+      color: $dg2;
+      opacity: 1;
+    }
+  }
+}
+.input-mt_20 {
+  margin-bottom: 20px;
+}
+.error {
+  &::part(base) {
+    border: 2px solid rgba(233, 60, 60, 0.75);
+    box-sizing: border-box;
+    border-radius: 6px;
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+}

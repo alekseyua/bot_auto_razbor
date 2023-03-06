@@ -1,0 +1,61 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/fonts/index.scss';
+.input {
+  &[disabled] {
+    &::part(base) {
+      --gx-input-color-disabled: rgba(40, 37, 52, 0.5);
+      background-color: transparent;
+      &:focus-within {
+        border-radius: 4px;
+        border-color: $dg2;
+      }
+    }
+  }
+  &::part(base) {
+    border-color: $id;
+    border-width: 2px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    opacity: 1;
+    height: 56px;
+    background-color: $id;
+
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+  &::part(label) {
+    @extend %text-small;
+    display: block;
+    color: $p2;
+    opacity: 0.75;
+  }
+  &::part(input) {
+    @extend %font;
+    font-size: 14px;
+    height: 54px;
+
+    &::placeholder {
+      color: $dg2;
+      opacity: 1;
+    }
+  }
+  &::part(suffix) {
+  }
+}
+.input-mt_20 {
+  margin-bottom: 20px;
+}
+
+.error {
+  &::part(base) {
+    border: 2px solid rgba(233, 60, 60, 0.75);
+    box-sizing: border-box;
+    border-radius: 6px;
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+}

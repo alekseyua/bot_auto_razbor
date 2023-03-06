@@ -1,0 +1,90 @@
+{
+    "name": "Главная",
+    "id": 1,
+    "message": {
+        "name": "Главное сообщение",
+        "id": 2,
+        "text": "Главное сообщение",
+        "image": ""
+    },
+    "buttons": [
+        {
+            "name": "Авто в разборе",
+            "id": 2,
+            "text": "Авто в разборе",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Инфо",
+            "id": 7,
+            "text": "Инфо",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Продать",
+            "id": 4,
+            "text": "Продать",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Рейтинг и отзывы",
+            "id": 5,
+            "text": "Рейтинг и отзывы",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Совместные закупки",
+            "id": 6,
+            "text": "Совместные закупки",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Создать запрос",
+            "id": 1,
+            "text": "Создать запрос",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        },
+        {
+            "name": "Фантики",
+            "id": 3,
+            "text": "Фантики",
+            "image": "",
+            "type": "Страница",
+            "url": null,
+            "action_page_id": null,
+            "additional_info": null,
+            "parent_page_id": 1
+        }
+    ],
+    "back_page_id": null
+}

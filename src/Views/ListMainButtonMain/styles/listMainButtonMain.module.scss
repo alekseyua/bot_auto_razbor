@@ -1,0 +1,93 @@
+.menu {
+    //.menu__container-list{}
+    &__container-list {
+        display: grid;
+        gap: 10px 25px;
+        grid-auto-rows: minmax(70px,77px);
+        grid-template-columns: 100px 100px;
+        position: relative;
+        z-index: 11;
+    }
+    //.menu__items-list{}
+    &__items-list{
+        position: relative;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 12px 24px 6px rgba(97, 97, 97, 0.08), 0px 24px 48px 6px rgba(97, 97, 97, 0.08);
+        // backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &>a{
+            width: 100%;
+            height: 100%;  
+            position: relative;
+        }
+        //.menu__items-list--disable{}
+        &--disable{
+            padding: 0;
+            background-color: #00000052;
+            // pointer-events: none;
+        }
+    }
+    //.menu__items-image{}
+    &__items-image{
+        // margin: 20px;
+        // height: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        display: block;
+        min-height: 50%;
+        left: 50%;
+        transform: translate(-50%, 5px);
+        // &::after{
+        //     background-color: rgba(94,130,169,.18);
+        //     border-radius: 50%;
+        //     content: "";
+        //     height: 45px;
+        //     position: absolute;
+        //     transform: translate(-12px,-4px);
+        //     width: 45px;
+        // }
+       
+    }
+    //.menu__items-text{}
+    &__items-text{
+        font-feature-settings: "tnum" on,"lnum" on,"kern" off;
+        color: #132b45;
+        font-family: Univia Pro;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: .005em;
+         display: flex;
+        justify-content: center;
+        height: 30px;
+        line-height: 10px;
+        transform: translateY(8px);
+        text-align: center;
+    }
+    //.menu__items-attent{}
+    &__items-attent{
+        position: absolute;
+        right: -5px;
+        top: -6px;
+    }
+    //.menu__items-attent--show{}
+    &__items-attent--show{
+        padding: 0;
+        animation: rotaite-attention .2s ease .01s infinite;
+    }
+}
+
+@keyframes rotaite-attention {
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-1deg);
+    }
+    
+}

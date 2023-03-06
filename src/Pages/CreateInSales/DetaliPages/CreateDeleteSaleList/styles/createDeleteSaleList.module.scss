@@ -1,0 +1,230 @@
+
+.create-edit-parser-list{
+    //.create-edit-parser-list__container-application{}
+    &__container-application{
+        display: flex;
+        padding: 15px;
+    }
+    //.create-edit-parser-list__slider-image{}
+    &__slider-image{
+        // max-width: 150px;
+        flex: 100px 0;
+    }
+    //.create-edit-parser-list__menu-main-container-list{}
+    &__menu-main-container-list{
+        padding: 0;
+        margin-bottom: 25px;
+        width: 90%;
+        // margin: 0 auto 25px;
+        // min-height: calc(100vh - 200px);
+        // overflow: scroll;
+    }
+    //.create-edit-parser-list__menu-container-list{}
+    &__menu-container-list{
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: minmax(70px, 110px);
+        gap: 0px;
+        position: relative;
+        z-index: 11;
+    }
+    //.create-edit-parser-list__menu-title{}
+    &__menu-title{
+        padding: 0;
+        position: relative;
+        z-index: 11;
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: 'Univia Pro';
+    }
+    //.create-edit-parser-list__menu-items{}
+    &__menu-items{
+        margin: 7px auto 8px;
+        position: relative;
+        z-index: 11;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 12px 24px 6px rgb(97 97 97 / 8%), 0px 24px 48px 6px rgb(97 97 97 / 8%);
+        -webkit-backdrop-filter: blur(12.5px);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        min-width: 300px;
+        width: 100%;
+        &.active{
+            background-color: #7e7e8678;
+        }
+        //.create-edit-parser-list__menu-items-container-name{}
+        &-container-name{
+            display: flex;
+            justify-content: space-between;
+        }
+        //.create-edit-parser-list__menu-items-text{}
+        &-text{
+            padding: 2px;
+            text-align: center;
+            font-family: 'Univia Pro';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.005em;
+            font-feature-settings: 'tnum' on, 'lnum' on, 'kern' off;
+            color: #132B45;
+            flex: auto;
+            text-align: start;
+            border: 1px solid #c3c4d3;
+            border-radius: 4px;
+            height: calc(100% - 20px);
+            box-shadow: 0px 12px 24px 6px rgb(97 97 97 / 78%), 0px 24px 48px 6px rgb(97 97 97 / 45%);
+            max-height: 55px;
+            min-height: 55px;
+            overflow: hidden;
+        }
+        //.create-edit-parser-list__menu-items-image{}
+        &-image{
+            margin: 20px;
+            height: 20%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background-color: rgb(19 43 69 / 18%);
+                transform: translate(0px, -27px);
+                // border-radius: 50%;
+            }
+        }
+        //.create-edit-parser-list__menu-items-title{}
+        &-title{
+            padding: 0;
+        }
+        //.create-edit-parser-list__menu-items-container{}
+        &__menu-items-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }       
+        
+    }
+    //.create-edit-parser-list__status-icon{}
+    &__status-icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 9;
+    }
+}
+
+.create-edit-parser-list{
+    // .create-edit-parser-list__menu-items-model{}
+    &__menu-items-model{
+        padding: 0;
+        font-weight: 900;
+        line-height: 120%;
+        letter-spacing: 2px;
+        color: #0915fe;
+        font-family: 'Univia Pro';
+        font-size: 11px;
+        white-space: nowrap;
+
+        // @media (min-width: 420px) {
+        //     font-size: 16px;        
+        // }   
+    }
+    //.create-edit-parser-list__menu-items-year{}
+    &__menu-items-year{
+        font-size: 11px;        
+        // @media (min-width: 420px) {
+        //     font-size: 16px;        
+        // } 
+    }
+
+}
+
+.button {
+    //.button__wrapper{}
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    //.button__container{}
+    &__container{
+        padding: 0;
+        position: relative;
+        &:active .button__text{
+            top: -7px;
+            transition: all .1s ease 0s;
+            box-shadow: 0 2px 0px 0 #0c205b;
+        }
+        //.button__container--active{}
+        &--active{
+            &::after,&::before{
+                left: 100%;
+                opacity: 0;
+            }
+            &.button__text::after{
+                width: 100%;
+            }
+            &>.button__text{
+                top: -10px;
+                color: #fff;
+                transition: all .5s ease .2s;
+                box-shadow: 0 5px 0px 0 #0c205b;
+            }
+            &>.button__text::after,
+            &>.button__text::before{
+                background-color: #0a32d1;
+            }
+        }
+    }
+    //.button__text{}
+    &__text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        border-radius: 50px;
+        height: 70px;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, .3);
+        letter-spacing: 10px;
+        transition: all 1s ease 0s;
+        top: 0;
+        overflow: hidden;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #eee;
+            transition: all .8s ease 0s;
+        }
+
+        &::after {
+            left: 0;
+            z-index: 2;
+        }
+
+        &::before {
+            right: 0;
+        }
+
+        &>span {
+            z-index: 3;
+            position: relative;
+        }
+    }
+}

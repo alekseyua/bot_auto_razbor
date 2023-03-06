@@ -1,13 +1,23 @@
-import React from 'react';
+import React from "react";
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './styles/global.scss';
 import reportWebVitals from './reportWebVitals';
+import {
+  RouterProvider,
+} from "react-router-dom";
+import { router } from './routers/routers';
+import { StoreContext } from 'storeon/react';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <StoreContext.Provider value={store} > 
+        <RouterProvider router={router} /> 
+    </StoreContext.Provider>
   </React.StrictMode>
 );
 

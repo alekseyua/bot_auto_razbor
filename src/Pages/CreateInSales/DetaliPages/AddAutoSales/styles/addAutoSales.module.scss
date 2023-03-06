@@ -1,0 +1,178 @@
+.aggregate {
+
+    //.aggregate__container{}
+    &__container {
+        width: 100%;
+        z-index: 98;
+        // min-height: 300px;
+        position: relative;
+    }
+
+    //.aggregate__car-list-container{}
+    &__car-list-container {
+        padding: 0;
+    }
+
+    //.aggregate__description{}
+    &__description {
+        min-height: 43px;
+        margin: 0 15px 25px;
+        width: calc(100% - 30px);
+        padding: 15px;
+        position: relative;
+        z-index: 11;
+        background: rgba(255, 255, 255, 0.8);
+        // box-shadow: 0px 12px 24px 6px rgba(97, 97, 97, 0.08), 0px 24px 48px 6px rgba(97, 97, 97, 0.08);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        min-width: 300px;
+
+        &>div {
+            float: left;
+        }
+    }
+
+    //.aggregate__menu-search{}
+    &__menu-search {
+        min-height: 43px;
+        margin: 0 15px 25px;
+        width: calc(100% - 30px);
+        padding: 15px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 8px 16px 2px rgba(97, 97, 97, 0.1), 0px 16px 32px 2px rgba(97, 97, 97, 0.1);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        min-width: 300px;
+
+        &>span {
+            z-index: 16px;
+        }
+    }
+}
+
+.button {
+    //.button__wrapper{}
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    //.button__container{}
+    &__container{
+        padding: 0;
+        position: relative;
+        // &::after,&::before{
+        //     content: '';
+        //     position: absolute;
+        //     width: 100px;
+        //     height: 100px;
+        //     border: 2px solid red;
+        //     top: -15px;
+        //     left: 50%;
+        //     z-index: 1;
+        //     margin: 0 0 0 -40px;
+        //     transition: all .8s ease 0s;
+        //     pointer-events: none;
+        // }
+        // &::after{
+        //     animation: rotate-square 20s infinite linear;
+        // }
+        // &::before{
+        //     animation: rotate-square 30s infinite linear;
+        // }
+        // &:hover::after,&:hover::before{
+        //     left: 100%;
+        //     opacity: 0;
+        // }
+        // &:hover .button__text::after{
+        //     width: 100%;
+        // }
+        // &:hover .button__text::after,
+        // &:hover .button__text::before{
+        //     background-color: #0a32d1;
+        // }
+        // &:hover .button__text{
+        //     top: -10px;
+        //     color: #fff;
+        //     transition: all .5s ease .2s;
+        //     box-shadow: 0 5px 0px 0 #0c205b;
+        // }
+        &:active .button__text{
+            top: -7px;
+            transition: all .1s ease 0s;
+            box-shadow: 0 2px 0px 0 #0c205b;
+        }
+        //.button__container--active{}
+        &--active{
+            &::after,&::before{
+                left: 100%;
+                opacity: 0;
+            }
+            &.button__text::after{
+                width: 100%;
+            }
+            &>.button__text{
+                top: -10px;
+                color: #fff;
+                transition: all .5s ease .2s;
+                box-shadow: 0 5px 0px 0 #0c205b;
+            }
+            &>.button__text::after,
+            &>.button__text::before{
+                background-color: #0a32d1;
+            }
+        }
+    }
+    //.button__text{}
+    &__text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        border-radius: 50px;
+        height: 70px;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, .3);
+        letter-spacing: 10px;
+        transition: all 1s ease 0s;
+        top: 0;
+        overflow: hidden;
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: #eee;
+            transition: all .8s ease 0s;
+        }
+
+        &::after {
+            left: 0;
+            z-index: 2;
+        }
+
+        &::before {
+            right: 0;
+        }
+
+        &>span {
+            z-index: 3;
+            position: relative;
+        }
+    }
+}
+
+@keyframes rotate-square{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    }

@@ -1,0 +1,53 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/fonts/index.scss';
+
+.input {
+  &[disabled] {
+    background-color: transparent;
+
+    &:focus-within {
+      border-radius: 4px;
+      border-color: $dg2;
+    }
+  }
+
+  border-color: $dg;
+  border-width: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 1;
+  height: 40px;
+
+  &:focus-within {
+    border-radius: 4px;
+    border-color: $dg2;
+  }
+
+  @extend %text-small;
+  display: block;
+  color: $p2;
+  opacity: 0.75;
+  @extend %font;
+  font-size: 14px;
+  height: 36px;
+
+  &::placeholder {
+    color: $dg2;
+    opacity: 1;
+  }
+}
+
+.input-mt_20 {
+  margin-bottom: 20px;
+}
+
+.error {
+  border: 2px solid rgba(233, 60, 60, 0.75);
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  &:focus-within {
+    border-radius: 4px;
+    border-color: $dg2;
+  }
+}

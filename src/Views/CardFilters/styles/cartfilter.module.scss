@@ -1,0 +1,40 @@
+.card-filter{
+    //.card-filter__container{}
+    &__container{
+        padding: 0;
+        width: calc(100% - 30px);
+        padding: 5px;
+    }
+    //.card-filter__item{}
+    &__item{
+        padding: 0;
+        pointer-events: all;
+        padding: 15px;
+        position: relative;
+        border: 1px solid #7c7c7c;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        // opacity: 0;
+        // right: -100vw;
+        transition: right .8s ease;
+        border-radius: .6rem;
+        margin-bottom: 4px;
+        background-color: #fff;
+    }
+    //.card-filter__wrap-title{}
+    &__wrap-title{
+        display: flex;
+
+    }
+    //.card-filter__icon-list{}
+    &__icon-list{
+        padding: 0;
+        margin-left: 10px !important;
+        margin-right: 15px !important;
+    }
+    //.card-filter__name{}
+    &__name{
+        padding: 2px;
+    }
+}

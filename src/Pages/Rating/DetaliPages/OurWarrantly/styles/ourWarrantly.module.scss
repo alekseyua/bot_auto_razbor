@@ -1,0 +1,94 @@
+
+.rating{
+    //.rating__info-container-list{}
+    &__info-container-list{
+        padding: 0;
+        width: 100%;
+        // margin: 0 auto 25px;
+        // overflow: scroll;
+    }
+    //.rating__container-list{}
+    &__container-list{
+        display: grid;
+        grid-template-columns: 130px 130px;
+        grid-auto-rows: minmax(70px, 100px);
+        gap: 20px;
+        position: relative;
+        z-index: 11;
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+    //.rating__title{}
+    &__title{
+        padding: 0;
+        position: relative;
+        z-index: 11;
+        margin: 20px 0;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: 'Univia Pro';
+    }
+    //.rating__description{}
+    &__description{
+        margin-top: 18px;
+        // margin-bottom: 25px;
+        margin: 0px auto 0px;
+        width: calc(100% - 20px);
+        padding: 15px;
+        position: relative;
+        z-index: 11;
+        background: rgb(255 255 255 / 80%);
+        box-shadow: 0px 12px 24px 6px rgb(97 97 97 / 8%), 0px 24px 48px 6px rgb(97 97 97 / 8%);
+        // backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        width: 90%;
+        &>div{
+            float: left;
+        }
+    }
+    //.rating__items{}
+    &__items{
+        position: relative;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 12px 24px 6px rgba(97, 97, 97, 0.08), 0px 24px 48px 6px rgba(97, 97, 97, 0.08);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        //.rating__items-title{}
+        &-title{
+            padding: 0;
+            text-align: center;
+        }
+        //.rating__items-text{}
+        &-text{
+            text-align: center;
+            font-family: 'Univia Pro';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.005em;
+            font-feature-settings: 'tnum' on, 'lnum' on, 'kern' off;
+            color: #132B45;
+        }
+        //.rating__items-image{}
+        &-image{
+            margin: 20px;
+            height: 20%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: rgb(19 43 69 / 18%);
+                transform: translate(20px, -16px);
+                border-radius: 50%;
+            }
+        }
+    }
+}

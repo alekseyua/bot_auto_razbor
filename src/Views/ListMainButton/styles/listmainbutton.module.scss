@@ -1,0 +1,86 @@
+.menu {
+    //.menu__container-list{}
+    &__container-list {
+        display: grid;
+        grid-template-columns: 130px 130px;
+        grid-auto-rows: minmax(70px, 100px);
+        gap: 10px 20px;
+        position: relative;
+        z-index: 11;
+    }
+    //.menu__items-list{}
+    &__items-list{
+        position: relative;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 12px 24px 6px rgba(97, 97, 97, 0.08), 0px 24px 48px 6px rgba(97, 97, 97, 0.08);
+        backdrop-filter: blur(12.5px);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        &>a{
+          width: 100%;
+          height: 100%;  
+          position: relative;
+        }
+        //.menu__items-list--disable{}
+        &--disable{
+            background-color: #0f0f1053;
+        }
+    }    
+    //.menu__items-image{}
+    &__items-image{
+        // margin: 20px;
+        // height: 20%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        display: block;
+        min-height: 50%;
+        left: 50%;
+        transform: translate(-50%, 10px);
+        z-index: 10;
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     width: 50px;
+        //     height: 50px;
+        //     background-color: rgb(94 130 169 / 18%);
+        //     transform: translate(-15px, -1px);
+        //     border-radius: 50%;
+        //     z-index: 9;
+        // }
+        // &::before{
+        //     content: 'Ruuum';
+        //     z-index: 8;
+        //     content: "Ruuum";
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     font-weight: 900;
+        //     font-size: 12px;
+        //     opacity: .4;
+        //     color: #ff0000e0;
+        //     transform: translate(-6px, 24px) skew(12deg, -29deg);
+        // }
+    }
+    //.menu__items-text{}
+    &__items-text{
+        font-feature-settings: "tnum" on,"lnum" on,"kern" off;
+        color: #132b45;
+        font-family: Univia Pro;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: .005em;
+        line-height: 13px;
+        transform: translateY(10px);
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,174 @@
+
+.checkbox {
+
+  //.checkbox__container{}
+  &__container {
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    > label {  //??? нужно просмотреть чтобы ни чего не сломалось в других местах сделал для каталога
+        color: #000;
+    }
+  }
+
+  //.checkbox__label{}
+  &__label {
+    font-size: 16px;
+    // margin-left: 10px;
+    display: inline-block; // to make it easier to click
+    color: #c3c3c3;
+    cursor: pointer;
+    position: relative; // important    
+    display: flex;
+    align-items: center;
+
+    // Now we'll create the checkbox object    
+    span:last-child {
+      position: relative;
+      left: 10px;
+      border: none !important;
+      color: #000;
+    }
+    span:not(:last-child) {
+      display: inline-block;
+      position: relative;
+      background-color: transparent;
+      width: 16px; // width: 25px для круглого
+      height: 16px; // height: 25px для круглого
+      min-width: 16px;
+      transform-origin: center;
+      border: 2px solid #333333;
+      border-radius: 5px;
+      // border-radius: 50%; // делает круглый 
+      vertical-align: -6px;
+      // margin-right: 10px;
+      transition: background-color 150ms 200ms, transform 350ms cubic-bezier(.78, -1.22, .17, 1.89); // custom ease effect for bouncy animation
+
+      // Now we'll create the "tick" using pseudo elements - those will be basically two lines that will be rotated to form the "tick"
+
+      &:before {
+        content: "";
+        width: 0px;
+        height: 2px;
+        border-radius: 2px; // so that the tick has nice rounded look
+        background: #333333;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 5px; // top: 13px; для круглого
+        left: 4px; // left: 9px; для круглого
+        transition: width 50ms ease 50ms;
+        transform-origin: 0% 0%;
+      }
+
+      &:after {
+        content: "";
+        width: 0;
+        height: 2px;
+        border-radius: 2px; // so that the tick has nice rounded look
+        background: #333333;
+        position: absolute;
+        transform: rotate(305deg);
+        top: 10px; // top: 16px; для круглого
+        left: 5px; // left: 10px; для круглого
+        transition: width 50ms ease;
+        transform-origin: 0% 0%;
+      }
+    }
+
+    // Time to add some life to it
+
+    // &:hover {
+    //   span {
+    //     &:before {
+    //       width: 5px;
+    //       transition: width 100ms ease;
+    //     }
+
+    //     &:after {
+    //       width: 10px;
+    //       transition: width 150ms ease 100ms;
+    //     }
+    //   }
+    // }
+
+  }
+
+  //.checkbox__input{}
+  // &__input {
+  //   font-size: 14px;
+  //   margin: 14px 0;
+
+  //   &:focus-within {}
+
+  //   background: transparent;
+  //   border: 2px solid;
+  //   border-radius: 4px;
+  // }
+
+
+
+}
+
+
+// input[type="checkbox"] {
+  //.type-checkbox{}
+.type-checkbox{
+  display: none; // hide the system checkbox
+
+  // Let's add some effects after the checkbox is checked
+
+  &:checked {
+    +label {
+      span:not(:last-child) {
+        background-color: #fff;
+        transform: scale(1.25); // enlarge the box
+        border: 2px solid #000;
+        min-width: 16px;
+        &:after {
+          width: 10px;
+          background: #333333;
+          transition: width 150ms ease 100ms; // enlarge the tick
+        }
+
+        &:before {
+          width: 5px;
+          background: #333333;
+          transition: width 150ms ease 100ms; // enlarge the tick
+        }
+      }
+
+      &:hover {
+
+        // copy the states for onMouseOver to avoid flickering
+        span:not(:last-child) {
+          background-color: #fff;
+          transform: scale(1.25); // enlarge the box
+
+          &:after {
+            width: 10px;
+            background: #333333;
+            transition: width 150ms ease 100ms; // enlarge the tick
+          }
+
+          &:before {
+            width: 5px;
+            background: #333333;
+            transition: width 150ms ease 100ms; // enlarge the tick
+          }
+        }
+      }
+    }
+  }
+}
+
+.color-field {
+//.color-field__icon{}
+  &__icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 1px solid #333333;
+    margin-right: 6px;
+    display: block;
+  }
+}
